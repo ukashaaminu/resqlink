@@ -1,15 +1,17 @@
-﻿呢個 App 主要用途係喺發生災難或者意外嘅時候，用戶可以透過 internet 一鍵向當地救援單位求救。如果裝置冇網絡，或者連唔到 server，App 會嘗試搵附近同樣有安裝呢個 App 嘅裝置，用藍牙幫手轉發訊息，再由有網絡嘅裝置代為發出求救訊號（即係喺藍牙網絡入面，搵到連到 internet 嘅裝置，由嗰部機幫手發送求救、個人資料、位置等等）。
-
+﻿# resqlink
 Apart from emergency alerts, the app also allows survivors to mark themselves as safe. Family and friends can check the status of affected people in the app, or survivors can actively notify their contacts that they are safe, have been rescued, have been sent to hospital, or have some other status update.
+
+呢個 App 主要用途係喺發生災難或者意外嘅時候，用戶可以透過 internet 一鍵向當地救援單位求救。如果裝置冇網絡，或者連唔到 server，App 會嘗試搵附近同樣有安裝呢個 App 嘅裝置，用藍牙幫手轉發訊息，再由有網絡嘅裝置代為發出求救訊號（即係喺藍牙網絡入面，搵到連到 internet 嘅裝置，由嗰部機幫手發送求救、個人資料、位置等等）。
 
 ResQ-Link: Decentralized Disaster Relief Network
 ResQ-Link：去中心化災難救援網絡
+
+ResQ-Link is a cross-platform emergency relief application. In the event of a disaster causing communication blackouts, it uses Bluetooth Mesh (or P2P Relay) to find nearby devices with Internet connectivity, "relaying" encrypted SOS signals to the rescue server. It also provides "Mark as Safe" and "Family Inquiry" features.
 
 ResQ-Link 是一個跨平台的緊急救援應用程式。它能在災難發生導致通訊中斷時，利用藍牙網狀網絡（或點對點中繼）尋找附近有互聯網連接的裝置，將加密的求救訊號「接力」傳送至救援伺服器。同時提供報平安與親友查詢功能。
 
 除咗求救之外，App 仲可以俾生還者「報平安」。親友可以喺 App 入面查詢受災人士狀況，或者由生還者主動通知親友自己已經平安／已獲救／已送院／或者其他最新情況。
 
-ResQ-Link is a cross-platform emergency relief application. In the event of a disaster causing communication blackouts, it uses Bluetooth Mesh (or P2P Relay) to find nearby devices with Internet connectivity, "relaying" encrypted SOS signals to the rescue server. It also provides "Mark as Safe" and "Family Inquiry" features.
 
 🏗 System Architecture (系統結構)系統採用 Client-Server 架構，但 Client 端具備 P2P (Peer-to-Peer) 通訊能力。
 The system adopts a Client-Server architecture, but the Client side possesses P2P (Peer-to-Peer) communication capabilities.
@@ -341,3 +343,4 @@ Push setup (FCM)
 
 
 🤝 Contribution (貢獻)歡迎提交 Pull Request 或 Issue。請確保遵循 Code of Conduct。Pull requests are welcome. Please ensure you follow the Code of Conduct.
+
