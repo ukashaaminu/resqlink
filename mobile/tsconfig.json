@@ -11,7 +11,8 @@
     "noEmit": true,
     "types": [
       "react",
-      "react-native"
+      "react-native",
+      "node"
     ],
     "baseUrl": ".",
     "paths": {
@@ -22,6 +23,7 @@
   },
   "include": [
     "App.tsx",
-    "src/**/*"
+    "src/**/*",
+    "test/**/*"
   ]
 }
