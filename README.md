@@ -656,5 +656,5 @@ Pull Requests are welcome. Please:
 
 ## License / 授權
 
-Add your license information here (e.g. MIT / Apache 2.0).  
-請在此處填寫專案授權條款（例如 MIT / Apache 2.0）。
+Mozilla Public License Version 2.0
+
