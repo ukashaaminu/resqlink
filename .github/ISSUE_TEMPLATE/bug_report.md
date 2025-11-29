@@ -119,9 +119,7 @@ Any other details that might help? (e.g. specific user account, time range, netw
 
 ---
 
-## 2️⃣ 繁體中文模板 — `bug_report_zh-Hant.md`
 
-```markdown
 ---
 name: "錯誤回報 / Bug Report（繁體中文）"
 about: "回報 ResQlink 中出現的錯誤或異常行為"
