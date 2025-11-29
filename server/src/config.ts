@@ -28,3 +28,4 @@ export const DATABASE_URL = process.env.DATABASE_URL || 'postgres://postgres:pos
 export const PGSSL = process.env.PGSSL === 'true';
 export const FCM_SERVER_KEY = process.env.FCM_SERVER_KEY || '';
 export const API_SHARED_SECRET = process.env.API_SHARED_SECRET || process.env.API_TOKEN || 'change-me-dev-token';
+export const API_AUTH_REQUIRED = process.env.API_AUTH_REQUIRED === 'true';

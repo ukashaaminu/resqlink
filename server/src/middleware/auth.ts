@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import { API_SHARED_SECRET } from '../config';
+import { API_AUTH_REQUIRED, API_SHARED_SECRET } from '../config';
 import { logEvent } from '../utils/log';
 
 const parsePresentedToken = (req: Request): string | undefined => {
@@ -18,8 +18,30 @@ export const requireApiSecret = (req: Request, res: Response, next: NextFunction
   const provided = parsePresentedToken(req);
 
   if (!API_SHARED_SECRET) {
-    logEvent('auth:error', { path: req.originalUrl, reason: 'missing_shared_secret' });
-    return res.status(503).json({ error: 'Server auth not configured' });
+    logEvent('auth:error', {
+      path: req.originalUrl,
+      reason: 'missing_shared_secret'
+    });
+
+    if (API_AUTH_REQUIRED) {
+      return res.status(503).json({ error: 'Server auth not configured' });
+    }
+
+    return next();
+  }
+
+  if (!provided) {
+    logEvent('auth:missing_token', {
+      path: req.originalUrl,
+      method: req.method,
+      ip: req.ip
+    });
+
+    if (API_AUTH_REQUIRED) {
+      return res.status(401).json({ error: 'Unauthorized' });
+    }
+
+    return next();
   }
 
   if (provided !== API_SHARED_SECRET) {
