@@ -1,4 +1,3 @@
-```markdown
 # 技術決策記錄 (TDR) — React Native vs Native; BLE-only vs Multi-channel  
 Technical Decision Record (TDR) — React Native vs Native; BLE-only vs Multi-channel
 
@@ -689,4 +688,3 @@ Existing Offline Mesh Applications
 
 - Bridgefy: *What are Mesh Networks and how do they work?* (2021)  
 - Bridgefy: *Most Popular Offline Mesh Messaging App* (2025)  
-```
